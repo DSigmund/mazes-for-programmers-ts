@@ -19,7 +19,12 @@ class Cell {
         }
     }
     isLinked(cell) {
-        return this.links.some(e => e.row === cell.row && e.column === cell.column);
+        if (cell) {
+            return this.links.some(e => e.row === cell.row && e.column === cell.column);
+        }
+        else {
+            return false;
+        }
     }
     neighbors() {
         let r = [];

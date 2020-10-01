@@ -56,6 +56,24 @@ class Grid {
         return this.grid[randomRow][randomColumn];
     }
     size() { return this.rows * this.columns; }
+    toString() {
+        let output = '+';
+        output += '---+'.repeat(this.columns) + '\n';
+        for (const row of this.grid) {
+            output += '|';
+            for (const cell of row) {
+                output += '   ';
+                output += (cell.isLinked(cell.east)) ? ' ' : '|';
+            }
+            output += '\n';
+            output += '+';
+            for (const cell of row) {
+                output += (cell.isLinked(cell.south)) ? '   +' : '---+';
+            }
+            output += '\n';
+        }
+        return output;
+    }
 }
 exports.Grid = Grid;
 exports.default = Grid;

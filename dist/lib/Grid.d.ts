@@ -8,5 +8,6 @@ export declare class Grid {
     private configureCells;
     randomCell(): Cell;
     size(): number;
+    toString(): string;
 }
 export default Grid;

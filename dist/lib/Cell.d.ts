@@ -9,7 +9,7 @@ export declare class Cell {
     constructor(row: number, column: number);
     link(cell: Cell, bidirectional?: boolean): void;
     unlink(cell: Cell, bidirectional?: boolean): void;
-    isLinked(cell: Cell): boolean;
+    isLinked(cell?: Cell): boolean;
     neighbors(): Cell[];
 }
 export default Cell;

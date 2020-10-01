@@ -29,8 +29,12 @@ export class Cell {
     }
   }
 
-  public isLinked (cell: Cell): boolean {
-    return this.links.some(e => e.row === cell.row && e.column === cell.column);
+  public isLinked (cell?: Cell): boolean {
+    if (cell) {
+      return this.links.some(e => e.row === cell.row && e.column === cell.column);
+    } else {
+      return false;
+    }
   }
 
   public neighbors (): Cell[] {

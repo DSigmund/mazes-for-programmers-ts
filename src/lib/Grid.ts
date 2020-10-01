@@ -66,5 +66,24 @@ export class Grid {
 
   public size(): number { return this.rows * this.columns;}
 
+  public toString(): string {
+    let output = '+';
+    output += '---+'.repeat(this.columns) + '\n';
+    for (const row of this.grid) {
+      output += '|';
+      for (const cell of row) {
+        output += '   ';
+        output += (cell.isLinked(cell.east)) ? ' ' : '|';
+      }
+      output += '\n';
+      output += '+';
+      for (const cell of row) {
+        output += (cell.isLinked(cell.south)) ? '   +' : '---+';
+      }
+      output += '\n';
+    }
+    return output;
+  }
+
 }
 export default Grid;
