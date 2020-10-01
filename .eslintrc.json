@@ -1,0 +1,20 @@
+{
+  "plugins": ["node", "@typescript-eslint"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 6
+  },
+  "rules": {
+    "semi": "warn",
+    "quotes": ["warn", "single"],
+    "no-multiple-empty-lines": "warn",
+    "no-trailing-spaces": "warn",
+    "no-whitespace-before-property": "warn",
+    "object-property-newline": "warn"
+  }
+}
+
