@@ -1,10 +1,25 @@
 import Grid from "./lib/Grid";
 import BinaryTree from "./lib/BinaryTree";
+import Sidewinder from "./lib/Sidewinder";
+let myArgs = process.argv.slice(2);
 
-let grid = new Grid(4,4);
+let size = parseInt(myArgs[0]);
+let algo = myArgs[1];
+
+let grid = new Grid(size, size);
 
 console.log('Cells: ' + grid.size());
 
-let btree = new BinaryTree(grid);
 
-console.log(btree.grid.toString());
+switch(algo) {
+  case "binarytree":
+    let btree = new BinaryTree(grid);
+    console.log(btree.grid.toString());
+    break;
+  case "sidewinder":
+    let sidewinder = new Sidewinder(grid);
+    console.log(sidewinder.grid.toString());
+    break;
+  default: console.error('Algorithm ' + algo + " not known yet ...");
+}
+
