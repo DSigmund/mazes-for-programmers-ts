@@ -85,5 +85,15 @@ export class Grid {
     return output;
   }
 
+  public flatten(): Cell[] {
+    let cells = [];
+    for (const row of this.grid) {
+      for (const cell of row) {
+        cells.push(cell);
+      }
+    }
+    return cells;
+  }
+
 }
 export default Grid;

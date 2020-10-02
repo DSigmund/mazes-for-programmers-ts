@@ -1,5 +1,6 @@
 import Grid from "./Grid";
-export declare class Sidewinder {
+import iAlgorithm from "./iAlogrithm";
+export declare class Sidewinder implements iAlgorithm {
     grid: Grid;
     constructor(grid: Grid);
 }

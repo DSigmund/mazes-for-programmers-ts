@@ -1,6 +1,7 @@
 import Grid from "./Grid";
+import iAlgorithm from "./iAlogrithm";
 
-export class BinaryTree {
+export class BinaryTree implements iAlgorithm {
   public grid: Grid;
 
   constructor(grid: Grid) {

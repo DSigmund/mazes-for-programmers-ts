@@ -74,6 +74,15 @@ class Grid {
         }
         return output;
     }
+    flatten() {
+        let cells = [];
+        for (const row of this.grid) {
+            for (const cell of row) {
+                cells.push(cell);
+            }
+        }
+        return cells;
+    }
 }
 exports.Grid = Grid;
 exports.default = Grid;

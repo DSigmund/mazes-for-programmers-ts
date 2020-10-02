@@ -9,5 +9,6 @@ export declare class Grid {
     randomCell(): Cell;
     size(): number;
     toString(): string;
+    flatten(): Cell[];
 }
 export default Grid;
